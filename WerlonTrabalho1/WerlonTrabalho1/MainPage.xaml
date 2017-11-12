@@ -5,9 +5,21 @@
              x:Class="WerlonTrabalho1.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Cadastro de cliente."
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="Nome" Placeholder="Somente primeiro nome"></Entry>
+            <Entry x:Name="Sobrenome" Placeholder="Sobrenome total"></Entry>
+            <Entry x:Name="Cpf" Placeholder="CPF"></Entry>
+            <Entry x:Name="Email" Placeholder="E-mail"></Entry>
+
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                <Button x:Name="Salvar" Text="Guardar" Clicked="Salvar_Clicked"></Button>
+                <Button x:Name="Editar" Text="Atualizar" Clicked="Editar_Clicked"></Button>
+                <Button x:Name="Excluir" Text="Remover" Clicked="Excluir_Clicked"></Button>
+            </StackLayout>
+
+            <ListView x:Name="Lista"></ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
